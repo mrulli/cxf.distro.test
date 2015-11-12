@@ -44,12 +44,8 @@
 	felix.fileinstall.poll=1000,\
 	felix.fileinstall.noInitialDelay=true
 -runrequires: \
-	osgi.identity;filter:='(osgi.identity=org.apache.servicemix.specs.jsr339-api-2.0)',\
 	osgi.identity;filter:='(osgi.identity=cxf.distro.test)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.cxf.cxf-rt-frontend-jaxrs)',\
-	osgi.identity;filter:='(&(osgi.identity=org.objectweb.asm.all)(version>=5.0.3))',\
-	osgi.identity;filter:='(&(osgi.identity=stax2-api)(version>=3.1.4))',\
-	osgi.identity;filter:='(&(osgi.identity=woodstox-core-asl)(version>=4.4.1))',\
 	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.web.pax-web-jetty)'
 -runbundles: \
 	com.springsource.org.json;version='[1.0.0,1.0.1)',\
@@ -94,6 +90,4 @@
 	osgi.enroute.dto.bndlib.provider;version='[1.0.0,1.0.1)',\
 	osgi.enroute.executor.simple.provider;version='[1.0.0,1.0.1)',\
 	osgi.enroute.web.simple.provider;version='[1.3.3,1.3.4)',\
-	osgi.enroute.webconsole.xray.provider;version='[2.0.0,2.0.1)',\
-	stax2-api;version='[3.1.4,3.1.5)',\
-	woodstox-core-asl;version='[4.4.1,4.4.2)'
+	osgi.enroute.webconsole.xray.provider;version='[2.0.0,2.0.1)'
