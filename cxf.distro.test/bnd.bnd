@@ -1,0 +1,24 @@
+Bundle-Version: 0.0.0.${tstamp}
+
+-buildpath: \
+	osgi.enroute.base.api;version=latest,\
+	org.apache.servicemix.specs.jsr339-api-2.0;version=2.4
+Bundle-Blueprint: \
+	OSGI-INF/blueprint/blueprint.xml
+Include-Resource: OSGI-INF/blueprint/blueprint.xml=blueprint.xml
+
+-dsannotations: *
+
+Private-Package: com.example.cxf.distro
+  
+Require-Capability: osgi.extender;\
+  filter:="(&(osgi.extender=osgi.blueprint)(version>=1.0)(!(version>=6.0)))"
+-runfw: org.eclipse.osgi;version='[3.10.100.v20150529-1857,3.10.100.v20150529-1857]'
+-runee: JavaSE-1.8
+-runrepos: \
+	Distro,\
+	InfoRepositoryWrapper[1],\
+	Local,\
+	Workspace,\
+	karaf-obr,\
+	Release
